@@ -4,6 +4,7 @@
     <div id="page-wrapper">
         
         <a href="{{url('/create')}}"><button class="btn btn-primary">Add New User</button></a>
+        <a href="{{url('/export-user')}}"><button class="btn btn-primary">Export Users</button></a>
         
         <table class="table">
            

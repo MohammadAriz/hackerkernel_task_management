@@ -55,7 +55,12 @@ public function update(Request $request, $id){
 }
 public function export_user() 
 {
-    return Excel::download(new ExportUsers, 'users.xlsx');
+    if(User::all()->count() > 0){
+
+        return Excel::download(new ExportUsers, 'users.xlsx');
+    }else{
+        return redirect()->back();
+    }
 }   
 public function delete($id){
     $delete = User::find($id);

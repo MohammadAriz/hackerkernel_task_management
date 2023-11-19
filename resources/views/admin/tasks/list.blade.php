@@ -41,6 +41,8 @@
                         <td>
                             @if($user)
                             {{ $user->email}}
+                            @else
+                            <p>No Email</p>
                         @endif
                         </td>
                         <td>{{ $task->task_detail }}</td>
